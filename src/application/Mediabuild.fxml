@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MediabuildController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mv" fitHeight="200.0" fitWidth="200.0" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </MediaView>
+         </children>
+         <opaqueInsets>
+            <Insets left="5.0" right="5.0" />
+         </opaqueInsets>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox style="-fx-background-color: #04C3DF;" BorderPane.alignment="BOTTOM_RIGHT">
+         <children>
+            <HBox fx:id="tl" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#play" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="||" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="10.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#normal" prefHeight="25.0" prefWidth="43.0" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="N" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="15.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#privios" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="&lt;&lt;&lt;" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="20.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#slow" prefHeight="25.0" prefWidth="47.0" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="&lt;&lt;" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#reload" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="R" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#fast" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="&gt;&gt;" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #7cfc00; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" text="&gt;&gt;&gt;" textAlignment="CENTER" textFill="#d90d98" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="10.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Region prefHeight="37.0" prefWidth="94.0" HBox.hgrow="ALWAYS" />
+                  <Label prefHeight="17.0" prefWidth="55.0" text="volume" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <SepiaTone />
+                     </effect>
+                  </Label>
+                  <Slider fx:id="vol" prefHeight="14.0" prefWidth="109.0" value="100.0" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#0fe82c" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Slider>
+                  <Label fx:id="vl" prefHeight="17.0" prefWidth="46.0" text="--">
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Time" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="25.0" top="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <SepiaTone />
+                     </effect>
+                  </Label>
+                  <Label fx:id="t3" text="--/--">
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="7.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Slider fx:id="time" prefHeight="14.0" prefWidth="382.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow color="#5308cf94" />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#c219be" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Slider>
+                  <Label fx:id="t2" text="--/--">
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="5.0" right="7.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#stop" style="-fx-background-color: #7cfc00;" text="sm">
+                     <HBox.margin>
+                        <Insets bottom="7.0" right="10.0" top="7.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="5.0" right="5.0" />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </VBox>
+   </bottom>
+   <top>
+      <MenuBar style="-fx-background-color: #04C3DF; -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="op" mnemonicParsing="false" style="-fx-background-color: #7cfc00;" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#playlist" style="-fx-background-color: #7cfc00;" text="Open Playlist" />
+              <MenuItem mnemonicParsing="false" onAction="#close" style="-fx-background-color: #7cfc00;" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Playback">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#forward" style="-fx-background-color: #7cfc00;" text="Jumpforward" />
+                  <MenuItem mnemonicParsing="false" onAction="#backward" style="-fx-background-color: #7cfc00;" text="Jumpbackword" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#help" style="-fx-background-color: #7cfc00;" text="Help (?)" />
+              <MenuItem mnemonicParsing="false" onAction="#about" style="-fx-background-color: #7cfc00;" text="About (i)" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <Glow level="0.24" />
+         </effect>
+         <opaqueInsets>
+            <Insets left="5.0" right="5.0" />
+         </opaqueInsets>
+      </MenuBar>
+   </top>
+</BorderPane>
